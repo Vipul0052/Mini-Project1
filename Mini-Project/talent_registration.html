@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/504c3f5e0b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <nav>
+        <a href="index.html" class="logo"
+          ><img src="" alt=""
+        /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fas fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="talent_registration.html">Talent Registration</a></li>
+            <li><a href="event_calender.html">Event Calander</a></li>
+            <li><a href="">Resource Section</a></li>
+           <li><a href="">Legal Considerations</a></li>
+          </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Unlock Your Athletic Potential – Enroll with Us Today!*</h1>
+        <p>
+          We are thrilled to invite you to join our dynamic sports empowerment
+          program!we are committed to nurturing and developing talent from all
+          backgrounds, including rural areas.
+        </p>
+        <a href="about.html" class="hero-btn">Read More</a>
+      </div>
+    </div>
+    <div class="containerr">
+      <div class="card">
+        <div class="inner_box" id="cart">
+          <div class="card-front">
+            <h2>LOGIN</h2>
+            <form action="registration_form.php" method="POST">
+              <input
+                type="email"
+                class="input-box"
+                name="email"
+                placeholder="Enter Your Email Id"
+                required
+              />
+              <input
+                type="password"
+                class="input-box"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <button type="submit" class="submit-btn">Submit</button>
+              <input type="checkbox" /><span>Remember Me</span>
+            </form>
+            <button type="button" class="btn" onclick="openRegister()">
+              I'm New Here
+            </button>
+            <a href="">Forgot Password</a>
+          </div>
+          <div class="card-back">
+            <h2>Register</h2>
+            <form action="registration_form.php" method="POST">
+              <input
+                type="text"
+                class="input-box"
+                name="name"
+                placeholder="Enter Your Name"
+                required
+              />
+              <input
+                type="email"
+                class="input-box"
+                name="email"
+                placeholder="Enter Your Email Id"
+                required
+              />
+              <input
+                type="password"
+                class="input-box"
+                name="password_1"
+                placeholder="Password"
+                required
+              />
+              <input
+                type="password"
+                class="input-box"
+                name="password_2"
+                placeholder="Re-enter Password"
+                required
+              />
+              <button type="submit" class="submit-btn">Submit</button>
+              <input type="checkbox" /><span>Remember Me</span>
+            </form>
+            <button type="button" class="btn" onclick="openLogin()">
+              I've an account
+            </button>
+            <a href="">Forgot Password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <h4>About Us</h4>
+      <p>
+        Welcome to Rural Sporting Talent, where we are dedicated to transforming
+        the dreams of rural athletes into national-level achievements. Our
+        journey began in 2023 with a vision to create equal opportunities in
+        sports, irrespective of geographical boundaries.
+      </p>
+      <div class="icons">
+        <a href="" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href=""
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+      <p>
+        Made with <i class="far fa-grin-hearts"></i> by Vipul and Team
+        <i class="far fa-copyright"></i>
+      </p>
+    </div>
+    <!--------Java Script Toggle Menu------>
+    <script type="text/javascript">
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+    <!-----------JS for rotating-------------->
+    <script>
+      var cart = document.getElementById("cart");
+
+      function openRegister() {
+        cart.style.transform = "rotateY(-180deg)";
+      }
+
+      function openLogin() {
+        cart.style.transform = "rotateY(0deg)";
+      }
+    </script>
+  </body>
+</html>
